@@ -3,6 +3,9 @@ module.exports = {
   output: {
     filename: "public/bundle.js"
   },
+  resolveLoader: {
+    moduleExtensions: ['-loader']
+  },  
   module: {
     loaders: [
       {
@@ -16,3 +19,4 @@ module.exports = {
     ]
   }
 }
+
