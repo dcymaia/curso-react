@@ -11,10 +11,18 @@
 import json
 import os
 import time
-from flask import Flask, Response, request
+from flask import Flask, Response, request, Blueprint, render_template
 
 app = Flask(__name__, static_url_path='', static_folder='public')
 app.add_url_rule('/', 'root', lambda: app.send_static_file('index.html'))
+
+
+main_blueprint = Blueprint('main', __name__, )
+
+
+@main_blueprint.route('/')
+def home():
+    return render_template('public/index.html')
 
 
 if __name__ == '__main__':
