@@ -1,8 +1,10 @@
-var React = require('react'); // importa a lib react
+var React = require('react');
 
 var MeuComponente = React.createClass({
   render: function(){
-    return (Yeah!);
+    return (
+    	<h1>Hello, world! Yeah :)</h1>
+	);
   }
 });
 
